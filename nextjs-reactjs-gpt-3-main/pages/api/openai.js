@@ -1,5 +1,12 @@
+import dotenv from 'dotenv';
+console.log(require("dotenv").config())
+
+
+console.log(process.env.REACT_APP_API_URL)
 const OpenAI = require('openai-api');
-const openai = new OpenAI('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');
+const openai = new OpenAI(process.env.REACT_APP_API_URL);
+
+
 
 export default async (req, res) => {
   let prompt = `Question: ${req.body.name}\n\nAnswer:\n`;
