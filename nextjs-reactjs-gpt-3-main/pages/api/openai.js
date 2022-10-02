@@ -1,8 +1,3 @@
-import dotenv from 'dotenv';
-console.log(require("dotenv").config())
-
-
-console.log(process.env.REACT_APP_API_URL)
 const OpenAI = require('openai-api');
 const openai = new OpenAI(process.env.REACT_APP_API_URL);
 
